@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-ys-5OI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a6o-KJ-nbJ">
+                                <rect key="frame" x="16" y="20" width="382" height="696"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJg-im-csO">
+                                <rect key="frame" x="16" y="672" width="382" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Mqe-Fh-Oxt"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Setting">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="settings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p5r-8w-48S"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Se-Va-5E2">
+                                <rect key="frame" x="16" y="423" width="382" height="244"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gLd-f8-qoe">
+                                        <rect key="frame" x="8" y="8" width="366" height="226"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhe-St-6vX">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r8t-G0-2jR">
+                                                <rect key="frame" x="0.0" y="39" width="366" height="32"/>
+                                                <segments>
+                                                    <segment title="White"/>
+                                                    <segment title="Black"/>
+                                                    <segment title="Green"/>
+                                                    <segment title="Red"/>
+                                                </segments>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="clockColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="b1e-0i-QL7"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQU-Wr-ENf">
+                                                <rect key="frame" x="0.0" y="78" width="366" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DCO-KE-dyw">
+                                                <rect key="frame" x="0.0" y="117" width="366" height="32"/>
+                                                <segments>
+                                                    <segment title="Black"/>
+                                                    <segment title="White"/>
+                                                    <segment title="Yellow"/>
+                                                    <segment title="Blue"/>
+                                                </segments>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="backgroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rib-uq-BSy"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg8-NO-k23">
+                                                <rect key="frame" x="0.0" y="156" width="366" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5Hj-r0-fNf">
+                                                <rect key="frame" x="0.0" y="195" width="366" height="32"/>
+                                                <segments>
+                                                    <segment title="Image 1"/>
+                                                    <segment title="Image 2"/>
+                                                    <segment title="Image 3"/>
+                                                    <segment title="Image 4"/>
+                                                </segments>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="backgroundImageSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ql0-3R-VQA"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gLd-f8-qoe" firstAttribute="top" secondItem="1Se-Va-5E2" secondAttribute="top" constant="8" id="2WY-CJ-RRM"/>
+                                    <constraint firstItem="gLd-f8-qoe" firstAttribute="leading" secondItem="1Se-Va-5E2" secondAttribute="leading" constant="8" id="775-iB-8dv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gLd-f8-qoe" secondAttribute="trailing" constant="8" id="S7F-PS-xaQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="gLd-f8-qoe" secondAttribute="bottom" constant="10" id="suu-Xu-ePg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FJg-im-csO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Eh-YK-ZFu"/>
+                            <constraint firstItem="a6o-KJ-nbJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5LQ-hJ-RfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FJg-im-csO" secondAttribute="trailing" constant="16" id="6qH-ov-I9o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a6o-KJ-nbJ" secondAttribute="bottom" constant="20" id="7P8-G0-a2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Se-Va-5E2" secondAttribute="trailing" constant="16" id="7QI-Dn-D2S"/>
+                            <constraint firstItem="HFe-ys-5OI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C4S-vf-8rT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FJg-im-csO" secondAttribute="bottom" constant="19" id="PPw-Sh-vuh"/>
+                            <constraint firstItem="HFe-ys-5OI" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Uaj-4M-0yk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a6o-KJ-nbJ" secondAttribute="trailing" constant="16" id="bwf-rP-YEy"/>
+                            <constraint firstItem="HFe-ys-5OI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q6F-fa-aa1"/>
+                            <constraint firstItem="HFe-ys-5OI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vKB-yz-1ec"/>
+                            <constraint firstItem="a6o-KJ-nbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xHN-IW-2TJ"/>
+                            <constraint firstItem="1Se-Va-5E2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xd2-ml-PIT"/>
+                            <constraint firstItem="FJg-im-csO" firstAttribute="top" secondItem="1Se-Va-5E2" secondAttribute="bottom" constant="5" id="yGY-X8-5sL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundColorSeg" destination="DCO-KE-dyw" id="3fk-7a-gvB"/>
+                        <outlet property="backgroundImage" destination="HFe-ys-5OI" id="485-um-FGd"/>
+                        <outlet property="backgroundImageSeg" destination="5Hj-r0-fNf" id="omC-5Q-C4a"/>
+                        <outlet property="clockColorSeg" destination="r8t-G0-2jR" id="mcJ-B0-4TW"/>
+                        <outlet property="label" destination="a6o-KJ-nbJ" id="B7g-al-KcQ"/>
+                        <outlet property="settingButton" destination="FJg-im-csO" id="oUy-8d-avN"/>
+                        <outlet property="settingsView" destination="1Se-Va-5E2" id="kZq-tZ-oQk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="3.2608695652173916"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
